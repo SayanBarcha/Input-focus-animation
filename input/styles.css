@@ -1,0 +1,55 @@
+/* rgb(177, 177, 177) */
+/* ~ */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(22, 20, 20);
+}
+.inputBox{
+  width: 300px;
+  position: relative;
+}
+input{
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  font-size: 1.3rem;
+  outline: none;
+  border: 2px solid rgb(177, 177, 177);
+  background: transparent;
+  border-radius: 5px;
+  transition: .5s;
+}
+span{
+  position: absolute;
+  left: 0;
+  padding: 15px;
+  pointer-events: none;
+  font-size: 1.3rem;
+  color: rgb(177, 177, 177);
+  transition: .5s;
+}
+input:valid ~ span,
+input:focus ~ span{
+  color: aqua;
+  transform: translateX(10px) translateY(-7px);
+  padding: 0 15px;
+  font-size: 1rem;
+  background: rgb(22, 20, 20);
+  border-left: 1px solid aqua;
+  border-right: 1px solid aqua;
+  letter-spacing: 0.2rem;
+}
+input:valid,
+input:focus{
+  border: 2px solid aqua;
+} 
